@@ -11,19 +11,14 @@ int prompt()
 {
     char command[100];
     
-    while (1) {
+    while (1)
+    {
         printf("$ ");
         fgets(command, sizeof(command), stdin);
-        
-        // Remove the newline character at the end of the command
+    
         command[strcspn(command, "\n")] = '\0';
-        
-        // Execute the command here...
-        
-        // Repeat the prompt
         printf("\n");
     }
     
     return 0;
-
 }
